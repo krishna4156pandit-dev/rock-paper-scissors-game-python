@@ -25,26 +25,27 @@ while True:
     user_choice = input("\nEnter rock, paper, or scissors (or 'q' to quit): ").lower()
 
     if user_choice == 'q':
-        print("\n👋 Game Over!")
+        print("\n Game Over!")
         print(f"Final Score → You: {user_score} | Computer: {computer_score}")
         break
 
     if user_choice not in ["rock", "paper", "scissors"]:
-        print("❌ Invalid choice! Please choose rock, paper, or scissors.")
+        print(" Invalid choice! Please choose rock, paper, or scissors.")
         continue
 
     computer_choice = get_computer_choice()
-    print(f"🤖 Computer chose: {computer_choice}")
+    print(f" Computer chose: {computer_choice}")
 
     winner = determine_winner(user_choice, computer_choice)
 
     if winner == "tie":
-        print("😐 It's a Tie!")
+        print(" It's a Tie!")
     elif winner == "user":
-        print("🎉 You Win!")
+        print(" You Win!")
         user_score += 1
     else:
-        print("💻 Computer Wins!")
+        print(" Computer Wins!")
         computer_score += 1
 
-    print(f"📊 Current Score → You: {user_score} | Computer: {computer_score}")
+
+    print(f" Current Score → You: {user_score} | Computer: {computer_score}")
